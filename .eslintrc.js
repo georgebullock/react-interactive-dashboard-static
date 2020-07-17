@@ -9,13 +9,11 @@ module.exports = {
 	},
 	plugins: ['@typescript-eslint/eslint-plugin', 'jest-dom', 'prettier'],
 	extends: [
-		'plugin:@typescript-eslint/eslint-recommended',
-		'plugin:@typescript-eslint/recommended',
-		'eslint-config-prettier/@typescript-eslint'
-	],
-	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
+		'plugin:@typescript-eslint/eslint-recommended',
+		'plugin:@typescript-eslint/recommended',
+		'eslint-config-prettier/@typescript-eslint',
 		'plugin:prettier/recommended',
 		'plugin:jest-dom/recommended'
 	],
@@ -24,7 +22,6 @@ module.exports = {
 		'no-console': 'off',
 		'prettier/prettier': 'error',
 		'react/react-in-jsx-scope': 'off',
-		'@typescript-eslint/explicit-function-return-type': 'error',
 		'space-before-function-paren': 'off'
 	},
 	settings: {
@@ -37,5 +34,13 @@ module.exports = {
 		browser: true,
 		node: true,
 		jest: true
-	}
+	},
+	overrides: [
+		{
+			files: ['*.js'],
+			rules: {
+				'@typescript-eslint/no-var-requires': 'off'
+			}
+		}
+	]
 };
