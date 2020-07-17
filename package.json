@@ -4,6 +4,7 @@
 	"description": "React Interactive Dashboard is a project I'm doing to level up my frontend skills",
 	"scripts": {
 		"start": "webpack-dev-server --mode development",
+		"start:db": "json-server --watch ./src/db/db.json",
 		"build": "webpack --mode production",
 		"prettier": "prettier \"**/*.+(js|jsx|json|css|scss|ts|tsx|md|mdx|graphql)\"",
 		"format": "npm run prettier -- --write",
