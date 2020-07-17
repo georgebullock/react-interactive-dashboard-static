@@ -2,17 +2,30 @@
 
 ### OVERVIEW
 
-React Interactive Dashboard Static is a static reboot of React Interactive Dashboard. The main feature of the app is a dashboard where admin users can view mock analytics data for users, comments, and hashtags. Later I plan to add user authentication and CRUD for commenting.
+React Interactive Dashboard Static is a static reboot of React Interactive
+Dashboard. The main feature of the app is a dashboard where admin users can view
+mock analytics data for users, comments, and hashtags. Later I plan to add user
+authentication and CRUD for commenting.
 
-Why the reboot? Building the full-stack version was taking way too long. Before deciding to reboot the project, I spent 3 months on the backend (learning everything from scratch) and I wasn't even close to finishing.
+Why the reboot? Building the full-stack version was taking way too long. Before
+deciding to reboot the project, I spent 3 months on the backend (learning
+everything from scratch) and I wasn't even close to finishing.
 
-As my primary goal is to level up my frontend skills ASAP, I decided to reboot the project using JSON server so I can immediately start working on the frontend. 
+As my primary goal is to level up my frontend skills ASAP, I decided to reboot
+the project using JSON server so I can immediately start working on the
+frontend.
 
-Despite having to pause development on the full-stack version, I'm incredibly happy I attempted. I learned how to configure a monorepo with yarn workspaces as well as node.js, Express (routing, middleware, error handling), REST API design, CORs, MySQL, access control, and more.
+Despite having to pause development on the full-stack version, I'm incredibly
+happy I attempted. I learned how to configure a monorepo with yarn workspaces as
+well as node.js, Express (routing, middleware, error handling), REST API design,
+CORs, MySQL, access control, and more.
 
-I'm definitely going to revisit the full-stack of version of React Interactive Dashboard to continue leveling up my backend skills. For now, I need to focus on frontend because my goal is to land my second professional frontend role.
+I'm definitely going to revisit the full-stack of version of React Interactive
+Dashboard to continue leveling up my backend skills. For now, I need to focus on
+frontend because my goal is to land my second professional frontend role.
 
-Shoutouts to my friends and former Aperto / IBM iX team leads that are helping me out with advice and code reviews:
+Shoutouts to my friends and former Aperto / IBM iX team leads that are helping
+me out with advice and code reviews:
 
 1. [@sebastian-fitzner](https://github.com/Sebastian-Fitzner)
 2. [@giuseppeminnella](https://github.com/giuseppeminnella)
@@ -21,7 +34,9 @@ Seriously, thanks guys!
 
 ### THE PROJECT STACK
 
-Bold items are required. The other items are interesting technologies I would like to explore if time permits, but they are "nice to haves" as opposed to requirements. 
+Bold items are required. The other items are interesting technologies I would
+like to explore if time permits, but they are "nice to haves" as opposed to
+requirements.
 
 - **HTML** (Structure, semantics)
 - **CSS** (Layout, styling, transitions, animations)
@@ -43,8 +58,8 @@ Bold items are required. The other items are interesting technologies I would li
 - Circle CI (Continuous integration)
 
 > ⚠️ Warning: The project uses husky and lint-staged to prevent people
-> committing code that doesn't pass validation (i.e. formatting, linting,
-> type checking, and testing).
+> committing code that doesn't pass validation (i.e. formatting, linting, type
+> checking, and testing).
 
 ### SETUP IS SIMPLE 👇
 
@@ -78,7 +93,8 @@ yarn start
 
 #### Project Motivation:
 
-I'm doing this project to level up my "back of the frontend", testing, and React skills.
+I'm doing this project to level up my "back of the frontend", testing, and React
+skills.
 
 #### Project Status:
 
