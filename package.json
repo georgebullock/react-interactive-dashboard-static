@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "React Interactive Dashboard is a project I'm doing to level up my frontend skills",
 	"scripts": {
+		"start": "concurrently --kill-others-on-fail \"yarn start:server\" \"yarn start:db\"",
 		"start:server": "webpack-dev-server --mode development",
 		"start:db": "json-server --watch ./src/db/db.json",
 		"build": "webpack --mode production",
