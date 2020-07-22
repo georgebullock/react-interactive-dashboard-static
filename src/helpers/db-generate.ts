@@ -77,12 +77,22 @@ function generateTags(number: number): void {
 	}
 }
 
-function generateDatabase(users: number, comments: number, tags: number): void {
-	db['users'] = generateUsers(users);
-	db['comments'] = generateComments(comments);
-	db['tags'] = generateTags(tags);
+function generateDatabase(
+	intUsers: number,
+	intComments: number,
+	intTags: number
+): void {
+	generateUsers(intUsers);
+	generateComments(intComments);
+	generateTags(intTags);
 
-	fs.writeFileSync('./../../src/db/db.json', JSON.stringify(db));
+	db['users'] = users;
+	db['comments'] = comments;
+	db['tags'] = tags;
+
+	console.log('db: ', JSON.stringify(db));
+
+	fs.writeFileSync('./src/db/db.json', JSON.stringify(db));
 }
 
 generateDatabase(10, 20, 5);
