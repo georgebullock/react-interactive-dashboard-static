@@ -92,7 +92,7 @@ function generateDatabase(
 
 	console.log('db: ', JSON.stringify(db));
 
-	fs.writeFileSync('./src/db/db.json', JSON.stringify(db));
+	fs.writeFileSync('./../db/db.json', JSON.stringify(db));
 }
 
 generateDatabase(10, 20, 5);
