@@ -1,5 +1,7 @@
 # core
 node_modules
 dist
+config
+
 
 # vendor

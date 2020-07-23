@@ -22,7 +22,8 @@ module.exports = {
 		'no-console': 'off',
 		'prettier/prettier': 'error',
 		'react/react-in-jsx-scope': 'off',
-		'space-before-function-paren': 'off'
+		'space-before-function-paren': 'off',
+		'@typescript-eslint/no-var-requires': 'off'
 	},
 	settings: {
 		react: {
@@ -38,9 +39,8 @@ module.exports = {
 	overrides: [
 		{
 			files: ['*.js'],
-			rules: {
-				'@typescript-eslint/no-var-requires': 'off'
-			}
+			parser: 'esprima',
+			extends: ['eslint:recommended']
 		}
 	]
 };
