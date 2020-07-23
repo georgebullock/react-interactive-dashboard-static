@@ -1,10 +1,16 @@
 const faker = require('faker');
 const fs = require('fs');
 
+// Create containers for JSON server database
 const db = {};
 const users = [];
 const comments = [];
 const tags = [];
+
+// Set number of values generated users, comments, and tags
+const GENERATED_USERS = 2500;
+const GENERATED_COMMENTS = 10000;
+const GENERATED_TAGS = 2000;
 
 function generateUsers(number) {
 	for (let i = 0; i < number; i++) {
@@ -56,18 +62,20 @@ function generateTags(number) {
 	}
 }
 
-function generateDatabase(intUsers, intComments, intTags) {
-	generateUsers(intUsers);
-	generateComments(intComments);
-	generateTags(intTags);
+function generateDatabase(numberUsers, numberComments, numberTags) {
+	generateUsers(numberUsers);
+	generateComments(numberComments);
+	generateTags(numberTags);
 
 	db['users'] = users;
 	db['comments'] = comments;
 	db['tags'] = tags;
 
-	console.log('db: ', JSON.stringify(db));
-
-	fs.writeFileSync('db.json', JSON.stringify(db));
+	try {
+		fs.writeFileSync('../src/db/db.json', JSON.stringify(db));
+	} catch {
+		console.error('Error: JSON Server database generation failed');
+	}
 }
 
-generateDatabase(10, 20, 5);
+generateDatabase(GENERATED_USERS, GENERATED_COMMENTS, GENERATED_TAGS);

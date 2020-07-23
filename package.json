@@ -5,11 +5,11 @@
 	"scripts": {
 		"start": "concurrently --kill-others-on-fail \"yarn start:server\" \"yarn start:db\"",
 		"start:server": "webpack-dev-server --mode development",
-		"start:db": "json-server --watch ./src/db/db.json",
 		"build": "webpack --mode production",
+		"start:db": "json-server --watch ./src/db/db.json",
 		"build:db": "npm run create:db && npm run generate:db",
 		"create:db": "cd ./src/db && rm -f db.json && touch db.json",
-		"generate:db": "cd ./src/helpers && tsc db-generate --noEmit",
+		"generate:db": "cd ./config && node db-generate",
 		"prettier": "prettier \"**/*.+(js|jsx|json|css|scss|ts|tsx|md|mdx|graphql)\"",
 		"format": "npm run prettier -- --write",
 		"lint": "eslint . --ext .js, .ts, .tsx --fix --no-error-on-unmatched-pattern",
