@@ -1,35 +1,14 @@
-import * as faker from 'faker';
-import * as fs from 'fs';
+const faker = require('faker');
+const fs = require('fs');
 
 const db = {};
-const users: User[] = [];
-const comments: Comment[] = [];
-const tags: Tag[] = [];
+const users = [];
+const comments = [];
+const tags = [];
 
-type User = {
-	id: number;
-	username: string;
-	email: string;
-	password: string;
-	created_at: string;
-};
-
-type Comment = {
-	id: number;
-	userId: number;
-	body: string;
-	created_at: string;
-};
-
-type Tag = {
-	id: number;
-	tag: string;
-	created_at: string;
-};
-
-function generateUsers(number: number): void {
+function generateUsers(number) {
 	for (let i = 0; i < number; i++) {
-		const obj = {} as User;
+		const obj = {};
 
 		obj['id'] = i;
 		obj['username'] = faker.internet.userName();
@@ -43,10 +22,10 @@ function generateUsers(number: number): void {
 	}
 }
 
-function generateComments(number: number): void {
+function generateComments(number) {
 	for (let i = 0; i < number; i++) {
-		const obj = {} as Comment;
-		let date: string;
+		const obj = {};
+		let date;
 		obj['id'] = i;
 		obj['userId'] = Math.floor(Math.random() * 11);
 		obj['body'] = faker.lorem.sentence(
@@ -65,9 +44,9 @@ function generateComments(number: number): void {
 	}
 }
 
-function generateTags(number: number): void {
+function generateTags(number) {
 	for (let i = 0; i < number; i++) {
-		const obj = {} as Tag;
+		const obj = {};
 		obj['id'] = i;
 		obj['tag'] = faker.lorem.word();
 		obj['created_at'] = obj['created_at'] = faker.date
@@ -77,11 +56,7 @@ function generateTags(number: number): void {
 	}
 }
 
-function generateDatabase(
-	intUsers: number,
-	intComments: number,
-	intTags: number
-): void {
+function generateDatabase(intUsers, intComments, intTags) {
 	generateUsers(intUsers);
 	generateComments(intComments);
 	generateTags(intTags);
@@ -92,7 +67,7 @@ function generateDatabase(
 
 	console.log('db: ', JSON.stringify(db));
 
-	fs.writeFileSync('./../db/db.json', JSON.stringify(db));
+	fs.writeFileSync('db.json', JSON.stringify(db));
 }
 
 generateDatabase(10, 20, 5);
