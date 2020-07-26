@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-	entry: { main: './src/app.tsx' },
+	entry: { main: './src/index.tsx' },
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[chunkhash].js'
@@ -26,6 +26,7 @@ module.exports = {
 						presets: [
 							'@babel/preset-env',
 							'@babel/preset-react',
+							'@babel/preset-typescript',
 							{
 								plugins: ['@babel/plugin-proposal-class-properties']
 							}
