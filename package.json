@@ -12,7 +12,7 @@
 		"generate:db": "cd ./config && node db-generate",
 		"prettier": "prettier \"**/*.+(js|jsx|json|css|scss|ts|tsx|md|mdx|graphql)\"",
 		"format": "npm run prettier -- --write",
-		"lint": "eslint . --ext .js, .ts, .tsx --fix --no-error-on-unmatched-pattern",
+		"lint": "eslint . --ext .ts --ext .tsx --ext .js --fix --no-error-on-unmatched-pattern",
 		"types": "tsc --composite false",
 		"test": "jest",
 		"test:watch": "jest --watch",
