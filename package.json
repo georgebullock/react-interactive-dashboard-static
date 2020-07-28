@@ -25,7 +25,7 @@
 		}
 	},
 	"lint-staged": {
-		".+(js|jsx|ts|tsx)": [
+		"**/*.+(js|jsx|ts|tsx)": [
 			"eslint --fix"
 		],
 		"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
