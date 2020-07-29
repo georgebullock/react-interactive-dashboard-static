@@ -3,10 +3,10 @@
 	"version": "1.0.0",
 	"description": "React Interactive Dashboard is a project I'm doing to level up my frontend skills",
 	"scripts": {
-		"start": "concurrently --kill-others-on-fail \"yarn start:server\" \"yarn start:db\"",
-		"start:server": "webpack-dev-server --mode development",
+		"start": "concurrently --kill-others-on-fail \"yarn start:client\" \"yarn start:server\"",
+		"start:client": "webpack-dev-server --mode development",
+		"start:server": "json-server --watch ./src/db/db.json",
 		"build": "webpack --mode production",
-		"start:db": "json-server --watch ./src/db/db.json",
 		"build:db": "npm run create:db && npm run generate:db",
 		"create:db": "cd ./src/db && rm -f db.json && touch db.json",
 		"generate:db": "cd ./config && node db-generate",
