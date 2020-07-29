@@ -1,26 +1,37 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-class App extends React.Component {
-	text = `React Interactive Dashboard`;
+type State = {
+	list: ReactElement[];
+};
 
-	data = fetch('http://localhost:3000/users')
-		.then(response => {
-			if (!response.ok) {
-				console.error('Response not OK');
-			}
+class App extends React.Component<{}, State> {
+	state: State = {
+		list: []
+	};
 
-			return response.json();
-		})
-		.then(data => {
-			console.log('data: ', data);
-			return data;
-		})
-		.catch(error => {
-			console.error(error);
-		});
+	componentDidMount(): void {
+		fetch('http://localhost:3000/comments')
+			.then(response => response.json())
+			.then(data => {
+				const list = data.map(item => {
+					return <li key={item.id}>{item.body}</li>;
+				});
+
+				this.setState({ list });
+			})
+			.catch(error => {
+				console.error(error);
+			});
+	}
 
 	render(): React.ReactElement {
-		return <h1 className="ui dividing centered header">{this.text}</h1>;
+		console.log('state: ', this.state.list);
+		return (
+			<>
+				<h1>React Interactive Dashboard</h1>
+				<ul className="ui dividing centered header">{this.state.list}</ul>;
+			</>
+		);
 	}
 }
 
