@@ -3,6 +3,7 @@
 
 # output folders
 dist
+db.json
 
 # environment variables
 .env

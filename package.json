@@ -3,11 +3,16 @@
 	"version": "1.0.0",
 	"description": "React Interactive Dashboard is a project I'm doing to level up my frontend skills",
 	"scripts": {
-		"start": "webpack-dev-server --mode development",
+		"start": "concurrently --kill-others-on-fail \"yarn start:client\" \"yarn start:server\"",
+		"start:client": "webpack-dev-server --mode development",
+		"start:server": "json-server --watch ./src/db/db.json",
 		"build": "webpack --mode production",
+		"build:db": "npm run create:db && npm run generate:db",
+		"create:db": "cd ./src/db && rm -f db.json && touch db.json",
+		"generate:db": "cd ./config && node db-generate",
 		"prettier": "prettier \"**/*.+(js|jsx|json|css|scss|ts|tsx|md|mdx|graphql)\"",
 		"format": "npm run prettier -- --write",
-		"lint": "eslint . --ext .js, .ts, .tsx --fix --no-error-on-unmatched-pattern",
+		"lint": "eslint . --ext .ts,.tsx,.js --fix --no-error-on-unmatched-pattern",
 		"types": "tsc --composite false",
 		"test": "jest",
 		"test:watch": "jest --watch",
@@ -16,11 +21,11 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "lint-staged"
+			"pre-commit": "npm run validate"
 		}
 	},
 	"lint-staged": {
-		".+(js|jsx|ts|tsx)": [
+		"**/*.+(js|jsx|ts|tsx)": [
 			"eslint --fix"
 		],
 		"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)": [
@@ -98,6 +103,8 @@
 		"webpack-dev-server": "^3.10.3"
 	},
 	"dependencies": {
+		"@types/faker": "^4.1.12",
+		"faker": "^4.1.0",
 		"react": "^16.13.0",
 		"react-dom": "^16.13.0"
 	}

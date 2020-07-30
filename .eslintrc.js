@@ -1,29 +1,31 @@
 module.exports = {
-	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		ecmaVersion: 2019,
-		sourceType: 'module',
-		ecmaFeatures: {
-			jsx: true
-		}
+		ecmaVersion: 2020,
+		sourceType: 'module'
 	},
-	plugins: ['@typescript-eslint/eslint-plugin', 'jest-dom', 'prettier'],
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
-		'plugin:@typescript-eslint/eslint-recommended',
-		'plugin:@typescript-eslint/recommended',
-		'eslint-config-prettier/@typescript-eslint',
 		'plugin:prettier/recommended',
-		'plugin:jest-dom/recommended'
+		'prettier/react'
 	],
 	plugins: ['prettier', 'jest-dom'],
 	rules: {
 		'no-console': 'off',
-		'prettier/prettier': 'error',
-		'react/react-in-jsx-scope': 'off',
-		'space-before-function-paren': 'off'
+		'react/react-in-jsx-scope': 'off'
 	},
+	overrides: [
+		{
+			files: ['**/*.ts', '**/*tsx'],
+			parser: '@typescript-eslint/parser',
+			extends: [
+				'plugin:@typescript-eslint/recommended',
+				'plugin:prettier/recommended',
+				'prettier/@typescript-eslint'
+			],
+			plugins: ['@typescript-eslint']
+		}
+	],
 	settings: {
 		react: {
 			pragma: 'react',
@@ -34,13 +36,5 @@ module.exports = {
 		browser: true,
 		node: true,
 		jest: true
-	},
-	overrides: [
-		{
-			files: ['*.js'],
-			rules: {
-				'@typescript-eslint/no-var-requires': 'off'
-			}
-		}
-	]
+	}
 };
