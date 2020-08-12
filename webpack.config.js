@@ -8,7 +8,8 @@ module.exports = {
 	entry: { main: './src/index.tsx' },
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].[chunkhash].js'
+		filename: '[name].[chunkhash].js',
+		publicPath: '/'
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js']
@@ -54,7 +55,10 @@ module.exports = {
 			inject: false,
 			hash: true,
 			template: './public/index.html',
-			filename: 'index.html'
+			favicon: './public/favicon.ico'
 		})
-	]
+	],
+	devServer: {
+		historyApiFallback: true
+	}
 };
