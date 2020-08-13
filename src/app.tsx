@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Dashboard from './routes/dashboard/index';
+import Dashboard from './routes/dashboard/dashboard';
 
 const CommentApp = (): ReactElement => {
 	return <div>Comment App</div>;
