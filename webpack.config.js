@@ -1,6 +1,5 @@
 // webpack v4
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -39,18 +38,23 @@ module.exports = {
 				test: /\.scss$/,
 				use: [
 					'style-loader',
-					MiniCssExtractPlugin.loader,
-					'css-loader',
+					{
+						loader: 'css-loader',
+						options: { importLoaders: 1, modules: true }
+					},
 					'sass-loader'
-				]
+				],
+				include: /\.module\.scss$/
+			},
+			{
+				test: /\.scss$/,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
+				exclude: /\.module\.scss$/
 			}
 		]
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
-		new MiniCssExtractPlugin({
-			filename: 'style.[contenthash].css'
-		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,

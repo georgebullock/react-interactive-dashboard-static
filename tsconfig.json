@@ -5,6 +5,7 @@
 		"noEmit": true,
 		"jsx": "react",
 		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"plugins": [{ "name": "typescript-plugin-css-modules" }]
 	}
 }
