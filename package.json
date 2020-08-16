@@ -107,7 +107,8 @@
 		"webpack-dev-server": "^3.10.3"
 	},
 	"dependencies": {
-		"@emotion/core": "^10.0.34",
+		"include-media": "^1.4.9",
+		"normalize.css": "^8.0.1",
 		"react": "^16.13.0",
 		"react-dom": "^16.13.0",
 		"react-router-dom": "^5.2.0"
