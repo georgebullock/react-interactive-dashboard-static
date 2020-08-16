@@ -1,0 +1,20 @@
+@import '~include-media/dist/include-media';
+
+// Colors
+$color-mineshaft: #222222;
+$color-wild-sand: #f4f4f4;
+
+.nav {
+	background-color: $color-mineshaft;
+	color: $color-wild-sand;
+}
+
+.list {
+	display: flex;
+	justify-content: space-around;
+	padding-inline-start: 0;
+}
+
+.list-item {
+	list-style-type: none;
+}
