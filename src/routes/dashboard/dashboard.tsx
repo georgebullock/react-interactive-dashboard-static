@@ -15,7 +15,7 @@ const Dashboard: React.FunctionComponent = () => {
 					<Grid row={false} sm={12} md={12} lg={4}>
 						<div
 							style={{
-								width: '500px',
+								width: '1000px',
 								maxWidth: '100%',
 								height: '200px',
 								backgroundColor: '#222222',
@@ -28,7 +28,7 @@ const Dashboard: React.FunctionComponent = () => {
 					<Grid row={false} sm={12} md={12} lg={4}>
 						<div
 							style={{
-								width: '500px',
+								width: '1000px',
 								maxWidth: '100%',
 								height: '200px',
 								backgroundColor: '#222222',
@@ -41,7 +41,7 @@ const Dashboard: React.FunctionComponent = () => {
 					<Grid row={false} sm={12} md={12} lg={4}>
 						<div
 							style={{
-								width: '500px',
+								width: '1000px',
 								maxWidth: '100%',
 								height: '200px',
 								backgroundColor: '#222222',
@@ -73,7 +73,7 @@ const Dashboard: React.FunctionComponent = () => {
 					<Grid row={false} sm={12} md={12} lg={4}>
 						<div
 							style={{
-								width: '500px',
+								width: '1000px',
 								maxWidth: '100%',
 								height: '200px',
 								backgroundColor: '#222222',
@@ -85,7 +85,7 @@ const Dashboard: React.FunctionComponent = () => {
 					<Grid row={false} sm={12} md={12} lg={4}>
 						<div
 							style={{
-								width: '500px',
+								width: '1000px',
 								maxWidth: '100%',
 								height: '200px',
 								backgroundColor: '#222222',
@@ -97,7 +97,7 @@ const Dashboard: React.FunctionComponent = () => {
 					<Grid row={false} sm={12} md={12} lg={4}>
 						<div
 							style={{
-								width: '500px',
+								width: '1000px',
 								maxWidth: '100%',
 								height: '200px',
 								backgroundColor: '#222222',

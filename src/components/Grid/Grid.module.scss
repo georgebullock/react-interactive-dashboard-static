@@ -21,7 +21,6 @@ Row Styles
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
-	padding-bottom: $padding-base * 2;
 }
 
 /* ---------------------------------------------------
@@ -29,14 +28,13 @@ Column Styles
 --------------------------------------------------- */
 .column {
 	flex: 1 1 0px;
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
+	padding: 1rem;
 	box-sizing: border-box;
 }
 
 .column > .row {
-	margin-left: -0.9375rem;
-	margin-right: -0.9375rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
 }
 
 /* ---------------------------------------------------
