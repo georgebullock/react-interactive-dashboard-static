@@ -1,20 +1,9 @@
-@import '~include-media/dist/include-media';
-
-/* ================================================
-Variables
-=================================================== */
-$color-mineshaft: #222222;
-$color-white: #fff;
-$color-wild-sand: #f4f4f4;
-$color-silver: #c1c1c1;
-$color-cornflower-blue: #5d8def;
-$padding-base: 1rem;
-$margin-base: 1rem;
+@import './../../index.scss';
 
 .nav {
 	height: inherit;
 
-	@include media('>tablet') {
+	@include media('>bp-tablet-m') {
 		padding-top: $padding-base * 2;
 	}
 }
@@ -27,7 +16,7 @@ $margin-base: 1rem;
 	padding-inline-start: 0;
 	height: inherit;
 
-	@include media('>tablet') {
+	@include media('>bp-tablet-m') {
 		flex-direction: column;
 		height: auto;
 	}
@@ -36,7 +25,7 @@ $margin-base: 1rem;
 .list-item {
 	list-style-type: none;
 
-	@include media('>tablet') {
+	@include media('>bp-tablet-m') {
 		margin: $margin-base * 2 0;
 	}
 }

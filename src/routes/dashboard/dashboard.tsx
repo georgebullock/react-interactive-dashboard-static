@@ -12,7 +12,7 @@ const Dashboard: React.FunctionComponent = () => {
 			<main className={styles['main-content']}>
 				{/* KPI Widget Row */}
 				<Grid row={true}>
-					<Grid row={false} sm={12} md={12} lg={4}>
+					<Grid row={false} sm={12} md={4}>
 						<div
 							style={{
 								width: '1000px',
@@ -25,7 +25,7 @@ const Dashboard: React.FunctionComponent = () => {
 						></div>
 					</Grid>
 
-					<Grid row={false} sm={12} md={12} lg={4}>
+					<Grid row={false} sm={12} md={4}>
 						<div
 							style={{
 								width: '1000px',
@@ -38,7 +38,7 @@ const Dashboard: React.FunctionComponent = () => {
 						></div>
 					</Grid>
 
-					<Grid row={false} sm={12} md={12} lg={4}>
+					<Grid row={false} sm={12} md={4}>
 						<div
 							style={{
 								width: '1000px',
@@ -70,7 +70,7 @@ const Dashboard: React.FunctionComponent = () => {
 
 				{/* List Widget Row */}
 				<Grid row={true}>
-					<Grid row={false} sm={12} md={12} lg={4}>
+					<Grid row={false} sm={12} md={4}>
 						<div
 							style={{
 								width: '1000px',
@@ -82,7 +82,7 @@ const Dashboard: React.FunctionComponent = () => {
 							}}
 						></div>
 					</Grid>
-					<Grid row={false} sm={12} md={12} lg={4}>
+					<Grid row={false} sm={12} md={4}>
 						<div
 							style={{
 								width: '1000px',
@@ -94,7 +94,7 @@ const Dashboard: React.FunctionComponent = () => {
 							}}
 						></div>
 					</Grid>
-					<Grid row={false} sm={12} md={12} lg={4}>
+					<Grid row={false} sm={12} md={4}>
 						<div
 							style={{
 								width: '1000px',

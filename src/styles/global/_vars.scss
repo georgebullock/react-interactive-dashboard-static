@@ -2,16 +2,27 @@
 BREAKPOINTS
 =================================================== */
 $breakpoints: (
-	'phone': 320px,
-	'tablet': 768px,
-	'desktop': 1024px
+	'bp-phone-s': 0px,
+	'bp-phone-m': 320px,
+	'bp-phone-l': 480px,
+	'bp-tablet-s': 600px,
+	'bp-tablet-m': 768px,
+	'bp-tablet-l': 1024px,
+	'bp-desktop-s': 1230px,
+	'bp-desktop-m': 1440px
 ) !default;
 
 /* ================================================
 COLORS
 =================================================== */
-$color-mineshaft: #222222 !default;
+$color-mineshaft: #222222;
 $color-white: #fff;
 $color-wild-sand: #f4f4f4;
 $color-silver: #c1c1c1;
 $color-cornflower-blue: #5d8def;
+
+/* ================================================
+Margin and Padding
+=================================================== */
+$padding-base: 1rem;
+$margin-base: 1rem;

@@ -11,7 +11,7 @@ module.exports = {
 		publicPath: '/'
 	},
 	resolve: {
-		extensions: ['.ts', '.tsx', '.js']
+		extensions: ['.ts', '.tsx', '.js', '.scss']
 	},
 	devtool: 'eval-source-map',
 	stats: 'errors-warnings',

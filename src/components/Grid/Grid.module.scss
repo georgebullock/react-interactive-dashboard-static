@@ -1,16 +1,4 @@
-@import '~include-media/dist/include-media';
-
-/* ================================================
-Variables
-=================================================== */
-$color-mineshaft: #222222;
-$color-white: #fff;
-$color-wild-sand: #f4f4f4;
-$color-silver: #c1c1c1;
-$color-cornflower-blue: #5d8def;
-$navigation-mobile-height: 7.5rem;
-$padding-base: 1rem;
-$margin-base: 1rem;
+@import './../../index.scss';
 
 /* ---------------------------------------------------
 Row Styles
@@ -132,7 +120,7 @@ Grid Column Classes
 	max-width: 100%;
 }
 
-@include media('>tablet') {
+@include media('>bp-tablet-m') {
 	.md-1 {
 		flex: 0 0 8.33333%;
 		max-width: 8.33333%;
@@ -194,7 +182,7 @@ Grid Column Classes
 	}
 }
 
-@include media('>tablet') {
+@include media('>bp-tablet-l') {
 	.lg-1 {
 		flex: 0 0 8.33333%;
 		max-width: 8.33333%;
