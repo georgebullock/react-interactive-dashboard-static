@@ -1,5 +1,17 @@
 @import '~include-media/dist/include-media';
 
+/* ================================================
+Variables
+=================================================== */
+$color-mineshaft: #222222;
+$color-white: #fff;
+$color-wild-sand: #f4f4f4;
+$color-silver: #c1c1c1;
+$color-cornflower-blue: #5d8def;
+$navigation-mobile-height: 7.5rem;
+$padding-base: 1rem;
+$margin-base: 1rem;
+
 /* ---------------------------------------------------
 Row Styles
 --------------------------------------------------- */
@@ -9,6 +21,7 @@ Row Styles
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
+	padding-bottom: $padding-base * 2;
 }
 
 /* ---------------------------------------------------

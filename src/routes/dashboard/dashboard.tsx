@@ -1,12 +1,113 @@
 import React from 'react';
+import Grid from '../../components/Grid/Grid';
 import Navigation from '../../components/Navigation/Navigation';
 import styles from './Dashboard.module.scss';
 
 const Dashboard: React.FunctionComponent = () => {
 	return (
 		<div className={styles.container}>
-			<Navigation />
-			<main className={styles['main-content']}>Main</main>
+			<div className={styles.sidebar}>
+				<Navigation />
+			</div>
+			<main className={styles['main-content']}>
+				{/* KPI Widget Row */}
+				<Grid row={true}>
+					<Grid row={false} sm={12} md={12} lg={4}>
+						<div
+							style={{
+								width: '500px',
+								maxWidth: '100%',
+								height: '200px',
+								backgroundColor: '#222222',
+								borderRadius: '10px',
+								opacity: '85%'
+							}}
+						></div>
+					</Grid>
+
+					<Grid row={false} sm={12} md={12} lg={4}>
+						<div
+							style={{
+								width: '500px',
+								maxWidth: '100%',
+								height: '200px',
+								backgroundColor: '#222222',
+								borderRadius: '10px',
+								opacity: '85%'
+							}}
+						></div>
+					</Grid>
+
+					<Grid row={false} sm={12} md={12} lg={4}>
+						<div
+							style={{
+								width: '500px',
+								maxWidth: '100%',
+								height: '200px',
+								backgroundColor: '#222222',
+								borderRadius: '10px',
+								opacity: '85%'
+							}}
+						></div>
+					</Grid>
+				</Grid>
+
+				{/* Chart Row */}
+				<Grid row={true}>
+					<Grid row={false} sm={12}>
+						<div
+							style={{
+								width: '1000px',
+								maxWidth: '100%',
+								height: '240px',
+								backgroundColor: '#222222',
+								borderRadius: '10px',
+								opacity: '85%'
+							}}
+						></div>
+					</Grid>
+				</Grid>
+
+				{/* List Widget Row */}
+				<Grid row={true}>
+					<Grid row={false} sm={12} md={12} lg={4}>
+						<div
+							style={{
+								width: '500px',
+								maxWidth: '100%',
+								height: '200px',
+								backgroundColor: '#222222',
+								borderRadius: '10px',
+								opacity: '85%'
+							}}
+						></div>
+					</Grid>
+					<Grid row={false} sm={12} md={12} lg={4}>
+						<div
+							style={{
+								width: '500px',
+								maxWidth: '100%',
+								height: '200px',
+								backgroundColor: '#222222',
+								borderRadius: '10px',
+								opacity: '85%'
+							}}
+						></div>
+					</Grid>
+					<Grid row={false} sm={12} md={12} lg={4}>
+						<div
+							style={{
+								width: '500px',
+								maxWidth: '100%',
+								height: '200px',
+								backgroundColor: '#222222',
+								borderRadius: '10px',
+								opacity: '85%'
+							}}
+						></div>
+					</Grid>
+				</Grid>
+			</main>
 		</div>
 	);
 };

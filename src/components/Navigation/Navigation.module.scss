@@ -8,29 +8,25 @@ $color-white: #fff;
 $color-wild-sand: #f4f4f4;
 $color-silver: #c1c1c1;
 $color-cornflower-blue: #5d8def;
-$navigation-mobile-height: 7.5rem;
-
-.nav {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height: $navigation-mobile-height;
-	background-color: $color-mineshaft;
-	color: $color-wild-sand;
-
-	@include media('>tablet') {
-		position: static;
-		height: 100vh;
-		width: (1/12) * 100%;
-	}
-}
+$padding-base: 1rem;
+$margin-base: 1rem;
 
 .list {
 	display: flex;
 	justify-content: space-around;
 	padding-inline-start: 0;
+
+	@include media('>tablet') {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: $margin-base * 2;
+	}
 }
 
 .list-item {
 	list-style-type: none;
+
+	@include media('>tablet') {
+		margin: $margin-base * 2 0;
+	}
 }

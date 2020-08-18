@@ -5,8 +5,8 @@ const Navigation: React.FunctionComponent = () => {
 	return (
 		<nav className={styles.nav}>
 			<ul className={styles.list}>
-				<li className={styles['list-item']}>Home</li>
-				<li className={styles['list-item']}>Dashboard</li>
+				<li className={styles['list-item']}>H</li>
+				<li className={styles['list-item']}>D</li>
 			</ul>
 		</nav>
 	);
