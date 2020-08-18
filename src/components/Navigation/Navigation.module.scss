@@ -1,8 +1,13 @@
 @import '~include-media/dist/include-media';
 
-// Colors
-$color-mineshaft: #222222;
+/* ================================================
+Variables
+=================================================== */
+$color-mine-shaft: #222222 !default;
+$color-white: #fff;
 $color-wild-sand: #f4f4f4;
+$color-silver: #c1c1c1;
+$color-cornflower-blue: #5d8def;
 
 .nav {
 	background-color: $color-mineshaft;

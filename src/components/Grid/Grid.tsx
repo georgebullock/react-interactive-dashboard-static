@@ -33,7 +33,6 @@ interface GridProps {
 const Grid: React.FunctionComponent<GridProps> = ({
 	row,
 	column,
-	expanded,
 	alignItems,
 	justify,
 	lg,
@@ -46,7 +45,6 @@ const Grid: React.FunctionComponent<GridProps> = ({
 	const classes: string =
 		(!isRow ? styles.column : styles.row) +
 		// Row styling
-		(isRow && expanded ? ` ${styles.expanded}` : '') +
 		(isRow && justify ? ` ${styles[justify]}` : '') +
 		(isRow && alignItems ? ` ${styles['align-' + alignItems]}` : '') +
 		// Column styling

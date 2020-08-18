@@ -1,12 +1,6 @@
 import React from 'react';
 import styles from './Navigation.module.scss';
 
-// Props - none
-
-// State - none
-
-// Component
-
 const Navigation: React.FunctionComponent<{}> = () => {
 	return (
 		<nav className={styles.nav}>
