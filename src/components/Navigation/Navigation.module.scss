@@ -11,15 +11,25 @@ $color-cornflower-blue: #5d8def;
 $padding-base: 1rem;
 $margin-base: 1rem;
 
+.nav {
+	height: inherit;
+
+	@include media('>tablet') {
+		padding-top: $padding-base * 2;
+	}
+}
+
 .list {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
+	margin: 0;
 	padding-inline-start: 0;
+	height: inherit;
 
 	@include media('>tablet') {
 		flex-direction: column;
-		align-items: center;
-		margin-bottom: $margin-base * 2;
+		height: auto;
 	}
 }
 

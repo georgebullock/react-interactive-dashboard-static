@@ -7,6 +7,7 @@ const Navigation: React.FunctionComponent = () => {
 			<ul className={styles.list}>
 				<li className={styles['list-item']}>H</li>
 				<li className={styles['list-item']}>D</li>
+				<li className={styles['list-item']}>L</li>
 			</ul>
 		</nav>
 	);

@@ -30,9 +30,11 @@ $margin-base: 1rem;
 	height: $navigation-mobile-height;
 	background-color: $color-mineshaft;
 	color: $color-wild-sand;
+	z-index: 10;
 
 	@include media('>tablet') {
-		position: static;
+		position: fixed;
+		left: 0;
 		height: 100vh;
 		width: (1/12) * 100%;
 	}
@@ -42,6 +44,7 @@ $margin-base: 1rem;
 	padding: $padding-base * 2 $padding-base;
 
 	@include media('>tablet') {
-		width: (11/12) * 100%;
+		width: (10/12) * 100%;
+		margin: 0 auto;
 	}
 }
