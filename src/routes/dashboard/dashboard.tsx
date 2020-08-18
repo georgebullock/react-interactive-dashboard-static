@@ -1,10 +1,11 @@
 import React from 'react';
+import Navigation from '../../components/Navigation/Navigation';
 import styles from './Dashboard.module.scss';
 
-const Dashboard = (): JSX.Element => {
+const Dashboard: React.FunctionComponent = () => {
 	return (
 		<div className={styles.container}>
-			<nav className={styles.navigation}>Nav</nav>
+			<Navigation />
 			<main className={styles['main-content']}>Main</main>
 		</div>
 	);
