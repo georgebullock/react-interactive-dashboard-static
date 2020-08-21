@@ -1,6 +1,6 @@
 import React from 'react';
-import Grid from '../../components/Grid/Grid';
-import Navigation from '../../components/Navigation/Navigation';
+import Grid from '../../shared/Grid/Grid';
+import Navigation from '../../core/Navigation/Navigation';
 import styles from './Dashboard.module.scss';
 
 const Dashboard: React.FunctionComponent = () => {
