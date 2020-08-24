@@ -14,13 +14,19 @@ const Navigation: React.FunctionComponent = () => {
 			<IconContext.Provider value={{ ...iconStyles }}>
 				<ul className={styles.list}>
 					<li className={styles['list-item']}>
-						<FaHome />
+						<a href="#">
+							<FaHome />
+						</a>
 					</li>
 					<li className={styles['list-item']}>
-						<FaChartBar />
+						<a href="#">
+							<FaChartBar />
+						</a>
 					</li>
 					<li className={styles['list-item']}>
-						<FaSignOutAlt />
+						<a href="#">
+							<FaSignOutAlt />
+						</a>
 					</li>
 				</ul>
 			</IconContext.Provider>
