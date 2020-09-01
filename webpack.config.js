@@ -1,6 +1,5 @@
 // webpack v4
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -8,10 +7,11 @@ module.exports = {
 	entry: { main: './src/index.tsx' },
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: '[name].[chunkhash].js'
+		filename: '[name].[chunkhash].js',
+		publicPath: '/'
 	},
 	resolve: {
-		extensions: ['.ts', '.tsx', '.js']
+		extensions: ['.ts', '.tsx', '.js', '.scss']
 	},
 	devtool: 'eval-source-map',
 	stats: 'errors-warnings',
@@ -38,23 +38,36 @@ module.exports = {
 				test: /\.scss$/,
 				use: [
 					'style-loader',
-					MiniCssExtractPlugin.loader,
-					'css-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 1,
+							modules: {
+								localIdentName: '[name]__[local]--[hash:base64:5]'
+							}
+						}
+					},
 					'sass-loader'
-				]
+				],
+				include: /\.module\.scss$/
+			},
+			{
+				test: /\.scss$/,
+				use: ['style-loader', 'css-loader', 'sass-loader'],
+				exclude: /\.module\.scss$/
 			}
 		]
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
-		new MiniCssExtractPlugin({
-			filename: 'style.[contenthash].css'
-		}),
 		new HtmlWebpackPlugin({
 			inject: false,
 			hash: true,
 			template: './public/index.html',
-			filename: 'index.html'
+			favicon: './public/favicon.ico'
 		})
-	]
+	],
+	devServer: {
+		historyApiFallback: true
+	}
 };

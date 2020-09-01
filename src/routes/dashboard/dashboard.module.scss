@@ -1,0 +1,48 @@
+@import './../../index.scss';
+
+/* ================================================
+Variables
+=================================================== */
+$navigation-mobile-height: 7.5rem;
+
+.container {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: $padding-base * 6;
+
+	@include media('>bp-tablet-m') {
+		flex-direction: row;
+		padding-bottom: 0;
+	}
+}
+
+.sidebar {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: $navigation-mobile-height;
+	background-color: $color-mineshaft;
+	color: $color-wild-sand;
+	z-index: 10;
+
+	@include media('>bp-tablet-m') {
+		position: fixed;
+		left: 0;
+		height: 100vh;
+		width: (1/12) * 100%;
+	}
+}
+
+.main-content {
+	padding: $padding-base * 2 $padding-base;
+
+	@include media('>bp-tablet-m') {
+		width: (9/12) * 100%;
+		margin: 0 (1/12) * 100% 0 (2/12) * 100%;
+	}
+
+	@include media('>bp-tablet-l') {
+		width: (8/12) * 100%;
+		margin: 0 (2/12) * 100% 0 (2.5/12) * 100%;
+	}
+}

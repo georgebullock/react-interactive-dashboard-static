@@ -19,17 +19,13 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link
 			rel="stylesheet"
-			href="<%=htmlWebpackPlugin.files.chunks.main.css %>"
+			href="<%=htmlWebpackPlugin.files.chunks.main.css%>"
 		/>
 	</head>
 
 	<body>
-		<main>
-			<div class="main ui text container">
-				<div id="react-entry"></div>
-			</div>
-		</main>
+		<div id="react-entry"></div>
 
-		<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+		<script src="<%=htmlWebpackPlugin.files.chunks.main.entry%>"></script>
 	</body>
 </html>

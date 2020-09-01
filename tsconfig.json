@@ -4,6 +4,8 @@
 		"moduleResolution": "node",
 		"noEmit": true,
 		"jsx": "react",
-		"allowSyntheticDefaultImports": true
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"plugins": [{ "name": "typescript-plugin-css-modules" }]
 	}
 }

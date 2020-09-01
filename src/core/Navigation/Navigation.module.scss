@@ -1,0 +1,31 @@
+@import './../../index.scss';
+
+.nav {
+	height: inherit;
+
+	@include media('>bp-tablet-m') {
+		padding-top: $padding-base * 2;
+	}
+}
+
+.list {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+	padding-inline-start: 0;
+	height: inherit;
+
+	@include media('>bp-tablet-m') {
+		flex-direction: column;
+		height: auto;
+	}
+}
+
+.list-item {
+	list-style-type: none;
+
+	@include media('>bp-tablet-m') {
+		margin: $margin-base * 2 0;
+	}
+}
