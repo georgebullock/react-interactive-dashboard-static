@@ -42,7 +42,7 @@ const Grid: React.FunctionComponent<GridProps> = ({
 }: GridProps) => {
 	const isRow = row || column;
 
-	const classes: string =
+	const classnames: string =
 		(!isRow ? styles.column : styles.row) +
 		// Row styling
 		(isRow && justify ? ` ${styles[justify]}` : '') +
@@ -52,7 +52,7 @@ const Grid: React.FunctionComponent<GridProps> = ({
 		(!isRow && md ? ` ${styles['md-' + md]}` : '') +
 		(!isRow && lg ? ` ${styles['lg-' + lg]}` : '');
 
-	return <div className={classes}>{children}</div>;
+	return <div className={classnames}>{children}</div>;
 };
 
 export default Grid;

@@ -31,13 +31,6 @@ $navigation-mobile-height: 7.5rem;
 		height: 100vh;
 		width: (1/12) * 100%;
 	}
-
-	@include media('>bp-tablet-m') {
-		position: fixed;
-		left: 0;
-		height: 100vh;
-		width: (1/12) * 100%;
-	}
 }
 
 .main-content {
