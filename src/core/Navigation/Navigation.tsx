@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, RouteProps } from 'react-router-dom';
 import { IconContext, IconType } from 'react-icons';
 import { FaHome, FaChartBar, FaSignOutAlt } from 'react-icons/fa';
 import styles from './Navigation.module.scss';
@@ -7,11 +7,11 @@ import styles from './Navigation.module.scss';
 /** ==============================================
  * Types/Interfaces
  * ============================================== */
-type RouteObject = {
+interface RouteObject extends RouteProps {
 	url: string;
 	Icon: IconType;
 	text?: string;
-};
+}
 
 interface NavListProps {
 	routes: RouteObject[];
