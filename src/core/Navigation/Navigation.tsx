@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink, RouteProps } from 'react-router-dom';
 import { IconContext, IconType } from 'react-icons';
-import { FaHome, FaChartBar, FaSignOutAlt } from 'react-icons/fa';
 import styles from './Navigation.module.scss';
 
 /** ==============================================
@@ -13,7 +12,7 @@ interface RouteObject extends RouteProps {
 	text?: string;
 }
 
-interface NavListProps {
+export interface NavProps {
 	routes: RouteObject[];
 }
 
@@ -34,25 +33,9 @@ const iconStyles = {
 	size: '3rem'
 };
 
-/** ==============================================
- * Dashboard Routes
- * ============================================== */
-const routes = [
-	{
-		url: '/',
-		Icon: FaHome
-	},
-	{
-		url: '/dashboard',
-		Icon: FaChartBar
-	},
-	{
-		url: '#',
-		Icon: FaSignOutAlt
-	}
-];
-
-const Navigation: React.FunctionComponent = () => {
+const Navigation: React.FunctionComponent<NavProps> = ({
+	routes
+}: NavProps) => {
 	return (
 		<nav className={styles.nav}>
 			<IconContext.Provider value={{ ...iconStyles }}>
@@ -62,9 +45,9 @@ const Navigation: React.FunctionComponent = () => {
 	);
 };
 
-const NavigationList: React.FunctionComponent<NavListProps> = ({
+const NavigationList: React.FunctionComponent<NavProps> = ({
 	routes
-}: NavListProps) => {
+}: NavProps) => {
 	return (
 		<ul className={styles.list}>
 			{routes.map(item => {
@@ -80,9 +63,13 @@ const NavItem: React.FunctionComponent<NavItemProps> = ({
 	const { url, Icon, text } = item;
 
 	return (
-		<NavLink className={styles['list-item']} to={url}>
+		<NavLink className={styles['list-item']} to={url} exact>
 			<Icon />
-			{text}
+			{text ? (
+				<span className={styles['list-item__text']}>{`${text}`}</span>
+			) : (
+				undefined
+			)}
 		</NavLink>
 	);
 };

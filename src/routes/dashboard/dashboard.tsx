@@ -1,13 +1,14 @@
 import React from 'react';
 import Grid from '../../shared/Grid/Grid';
 import Navigation from '../../core/Navigation/Navigation';
+import { routes } from '../../routes/index.routes';
 import styles from './Dashboard.module.scss';
 
 const Dashboard: React.FunctionComponent = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.sidebar}>
-				<Navigation />
+				<Navigation routes={routes} />
 			</div>
 			<main className={styles['main-content']}>
 				{/* KPI Widget Row */}
