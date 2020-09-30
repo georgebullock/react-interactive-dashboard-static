@@ -34,7 +34,7 @@ describe('Rendering', () => {
 	test('It should be something specific', () => {
 		// Arrange - Setup your test
 		const props = createTestProps();
-		const { debug } = render(
+		render(
 			<MemoryRouter>
 				<Navigation routes={props.routes} />
 			</MemoryRouter>
