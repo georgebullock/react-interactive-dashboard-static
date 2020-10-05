@@ -9,7 +9,7 @@ import styles from './Navigation.module.scss';
 interface RouteObject extends RouteProps {
 	url: string;
 	Icon: IconType;
-	text?: string;
+	text: string;
 }
 
 export interface NavProps {
@@ -20,7 +20,7 @@ interface NavItemProps {
 	item: {
 		url: string;
 		Icon: IconType;
-		text?: string;
+		text: string;
 	};
 }
 
@@ -65,11 +65,7 @@ const NavItem: React.FunctionComponent<NavItemProps> = ({
 	return (
 		<NavLink className={styles['list-item']} to={url} exact>
 			<Icon />
-			{text ? (
-				<span className={styles['list-item__text']}>{`${text}`}</span>
-			) : (
-				undefined
-			)}
+			<span className={styles['list-item__text']}>{`${text}`}</span>
 		</NavLink>
 	);
 };
