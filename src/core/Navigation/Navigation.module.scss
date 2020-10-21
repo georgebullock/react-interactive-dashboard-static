@@ -29,3 +29,7 @@
 		margin: $margin-base * 2 0;
 	}
 }
+
+.list-item__text {
+	@include sr-only();
+}
