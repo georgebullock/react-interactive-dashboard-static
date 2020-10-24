@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import styles from 'Headline.module.scss';
+import styles from './Headline.module.scss';
 
 /** ==============================================
  * Types/Interfaces
@@ -15,7 +15,7 @@ const Headline = ({
 	headlineText
 }: HeadlineProps): ReactElement => {
 	const Element = headingLevel;
-	return <Element>{headlineText}</Element>;
+	return <Element className={styles.headline}>{headlineText}</Element>;
 };
 
 export default Headline;
