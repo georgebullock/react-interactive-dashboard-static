@@ -4,9 +4,11 @@ import styles from './Headline.module.scss';
 /** ==============================================
  * Types/Interfaces
  * ============================================== */
+type HeadlineTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type HTMLElement = keyof React.ReactHTML;
 
 export interface HeadlineProps {
-	headingLevel: keyof React.ReactHTML;
+	headingLevel: HTMLElement & HeadlineTags;
 	headlineText: string;
 }
 
