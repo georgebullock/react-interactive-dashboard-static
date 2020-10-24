@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import styles from './IndicatorWidget.module.scss';
 import Headline from './../../../shared/Headline/Headline';
+import Indicator from './../Indicator/Indicator';
 import { IconType } from 'react-icons';
 
 /** ==============================================
@@ -25,19 +26,6 @@ const IndicatorWidget = (): ReactElement => {
 			<Indicator />
 		</div>
 	);
-};
-
-const Indicator = (): ReactElement => {
-	return (
-		<div>
-			Indicator
-			<ContextBar />
-		</div>
-	);
-};
-
-const ContextBar = (): ReactElement => {
-	return <div>Context Bar</div>;
 };
 
 export default IndicatorWidget;
