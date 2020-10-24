@@ -19,7 +19,7 @@ describe('Headline', () => {
 		test('It should should render the right headline text', () => {
 			// Arrange - Setup your test
 			const props = createTestProps();
-			// console.log(props.headingLevel, props.headlineText);
+
 			// Act - Take some action
 			render(
 				<Headline
@@ -43,7 +43,7 @@ describe('Headline', () => {
 		test('It should should render the right headline tag', () => {
 			// Arrange - Setup your test
 			const props = createTestProps();
-			// console.log(props.headingLevel, props.headlineText);
+
 			// Act - Take some action
 			render(
 				<Headline
