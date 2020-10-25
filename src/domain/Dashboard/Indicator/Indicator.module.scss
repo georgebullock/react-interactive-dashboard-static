@@ -7,9 +7,14 @@
 }
 
 .indicator__value {
+	display: inline-flex;
+	font-size: $font-size-large;
+	align-self: center;
 	color: $color-mineshaft;
 }
 
 .indicator__context-bar {
+	display: inline-flex;
+	align-self: center;
 	color: $color-mineshaft;
 }

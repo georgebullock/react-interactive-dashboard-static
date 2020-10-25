@@ -6,6 +6,7 @@ Default Styles
 .headline {
 	@include headline-h2();
 
+	margin: 0;
 	display: inline-flex;
 	align-self: center;
 }

@@ -1,4 +1,8 @@
+@import './../../../index.scss';
+
 .widget {
 	display: flex;
 	flex-direction: column;
+	padding: $padding-base;
+	outline: 1px solid $color-mineshaft;
 }
