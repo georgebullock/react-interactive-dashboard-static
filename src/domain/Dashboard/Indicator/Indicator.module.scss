@@ -1,6 +1,12 @@
 @import './../../../index.scss';
 
 .indicator {
+	display: flex;
+	flex-direction: column;
+	color: $color-mineshaft;
+}
+
+.indicator__value {
 	color: $color-mineshaft;
 }
 
