@@ -10,6 +10,8 @@ const IndicatorWidget = (): ReactElement => {
 	return (
 		<section className={styles.widget}>
 			<Indicator
+				headingLevel="h2"
+				headlineText="Comments"
 				indicatorValue="300"
 				contextBarValue="35%"
 				hasContextBar={true}

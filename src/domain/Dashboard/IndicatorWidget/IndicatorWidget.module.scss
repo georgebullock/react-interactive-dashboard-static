@@ -4,5 +4,6 @@
 	display: flex;
 	flex-direction: column;
 	padding: $padding-base;
-	outline: 1px solid $color-mineshaft;
+	border: 1px solid $color-mineshaft;
+	border-radius: 10px;
 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import Headline from './../../../shared/Headline/Headline';
+import Headline, { HeadlineProps } from './../../../shared/Headline/Headline';
 import styles from './Indicator.module.scss';
 
 /** ==============================================
  * Types/Interfaces
  * ============================================== */
-export interface IndicatorProps {
+export interface IndicatorProps extends HeadlineProps {
 	indicatorValue: string;
 	contextBarValue?: string;
 	hasContextBar?: boolean;
@@ -16,13 +16,15 @@ export interface ContextBarProps {
 }
 
 const Indicator: React.FunctionComponent<IndicatorProps> = ({
+	headingLevel,
+	headlineText,
 	indicatorValue,
 	contextBarValue,
 	hasContextBar
 }: IndicatorProps) => {
 	return (
 		<article className={styles.indicator}>
-			<Headline headlineText="Comments" headingLevel="h2" />
+			<Headline headlineText={headlineText} headingLevel={headingLevel} />
 			<div className={styles['indicator__value']}>{indicatorValue}</div>
 			{hasContextBar ? (
 				<IndicatorContextBar contextBarValue={contextBarValue} />
