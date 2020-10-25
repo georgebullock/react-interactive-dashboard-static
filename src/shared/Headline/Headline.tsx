@@ -12,10 +12,10 @@ export interface HeadlineProps {
 	headlineText: string;
 }
 
-const Headline = ({
+const Headline: React.FunctionComponent<HeadlineProps> = ({
 	headingLevel,
 	headlineText
-}: HeadlineProps): ReactElement => {
+}: HeadlineProps) => {
 	const Element = headingLevel;
 	return <Element className={styles.headline}>{headlineText}</Element>;
 };

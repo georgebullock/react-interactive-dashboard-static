@@ -5,4 +5,7 @@ Default Styles
 --------------------------------------------------- */
 .headline {
 	@include headline-h2();
+
+	display: inline-flex;
+	align-self: center;
 }
