@@ -2,7 +2,7 @@ import React from 'react';
 import Headline, { HeadlineProps } from './../../../shared/Headline/Headline';
 import styles from './Indicator.module.scss';
 
-/** ==============================================
+/* ==============================================
  * Types/Interfaces
  * ============================================== */
 export interface IndicatorProps extends HeadlineProps {

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import styles from './Headline.module.scss';
 
-/** ==============================================
+/* ==============================================
  * Types/Interfaces
  * ============================================== */
 type HeadlineTags = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
