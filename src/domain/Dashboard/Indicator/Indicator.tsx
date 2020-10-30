@@ -19,8 +19,8 @@ const Indicator: React.FunctionComponent<IndicatorProps> = ({
 	headingLevel,
 	headlineText,
 	indicatorValue,
-	contextBarValue,
-	hasContextBar
+	hasContextBar,
+	contextBarValue
 }: IndicatorProps) => {
 	return (
 		<article className={styles.indicator}>

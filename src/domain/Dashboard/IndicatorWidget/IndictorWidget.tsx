@@ -1,18 +1,13 @@
 import React, { ReactElement } from 'react';
 import styles from './IndicatorWidget.module.scss';
 import Indicator from './../Indicator/Indicator';
-import { useFetchRequest } from './../../../shared/hooks/useFetchRequest';
+import { useIndicator } from './useIndicator';
 
 /* ==============================================
  * Types/Interfaces
  * ============================================== */
 
 const IndicatorWidget = (): ReactElement => {
-	const endpoint = { url: 'http://localhost:3000/users' };
-	const responseState = useFetchRequest(endpoint);
-
-	console.log('responseState: ', responseState);
-
 	return (
 		<section className={styles.widget}>
 			<Indicator

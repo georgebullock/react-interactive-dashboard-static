@@ -3,7 +3,7 @@ import { useReducer, useEffect } from 'react';
 /* ==============================================
  * Types/Interfaces
  * ============================================== */
-interface UseFetchState {
+export interface UseFetchState {
 	data: [];
 	status: string;
 	error: Error | null;
@@ -18,7 +18,7 @@ export const useFetchRequest = ({ url }) => {
 	};
 
 	// 2. Define actions 3. Write reducer
-	const reducer = (state, action) => {
+	const reducer = (state, action): UseFetchState => {
 		switch (action.type) {
 			case 'FETCH_INIT':
 				console.log('FETCH_INIT');
