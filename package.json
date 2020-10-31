@@ -9,7 +9,7 @@
 		"build": "webpack --mode production",
 		"build:db": "npm run create:db && npm run generate:db",
 		"create:db": "cd ./src/db && rm -f db.json && touch db.json",
-		"generate:db": "cd ./config && node db-generate",
+		"generate:db": "cd ./tasks && node db-generate",
 		"prettier": "prettier \"**/*.+(js|jsx|json|css|scss|ts|tsx|md|mdx|graphql)\"",
 		"format": "npm run prettier -- --write",
 		"lint": "eslint . --ext .ts,.tsx,.js --fix --no-error-on-unmatched-pattern",

@@ -20,7 +20,7 @@ function generateUsers(number) {
 		obj['username'] = faker.internet.userName();
 		obj['email'] = faker.internet.email();
 		obj['password'] = faker.internet.password();
-		obj['created_at'] = faker.date
+		obj['createdDate'] = faker.date
 			.between(new Date(2015, 11, 17), new Date())
 			.toISOString();
 
@@ -40,11 +40,11 @@ function generateComments(number) {
 
 		for (const user of users) {
 			if (user.id === obj.userId) {
-				date = faker.date.between(user.created_at, new Date()).toISOString();
+				date = faker.date.between(user.createdDate, new Date()).toISOString();
 			}
 		}
 
-		obj['created_at'] = date;
+		obj['createdDate'] = date;
 
 		comments.push(obj);
 	}
@@ -55,7 +55,7 @@ function generateTags(number) {
 		const obj = {};
 		obj['id'] = i;
 		obj['tag'] = faker.lorem.word();
-		obj['created_at'] = obj['created_at'] = faker.date
+		obj['createdDate'] = faker.date
 			.between(new Date(2015, 11, 17), new Date())
 			.toISOString();
 		tags.push(obj);
