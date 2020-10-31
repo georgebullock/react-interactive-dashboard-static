@@ -1,25 +1,29 @@
 import { useState } from 'react';
-import {
-	useFetchRequest,
-	UseFetchState
-} from './../../../shared/hooks/useFetchRequest';
-
-// const endpoint = { url: 'http://localhost:3000/users' };
+import { useFetchRequest } from './../../../shared/hooks/useFetchRequest';
+import { getByInterval } from './getByInterval';
 
 type IndicatorState = {
 	// headingLevel,
 	// headlineText,
 	// indicatorValue,
 	// hasContextBar,
-	// indicatorValue: number
+	indicatorValue: number;
 	// contextBarValue
 };
 
-export const useIndicator = ({ endpoint }) => {
-	const [indicatorValue, setIndicatorValue] = useState();
-	const responseState = useFetchRequest(endpoint);
-	console.log('responseState: ', responseState);
-	// setIndicatorValue();
+export type Endpoint = {
+	url: string;
+};
+
+export const useIndicator = ({ url }: Endpoint): IndicatorState => {
+	const [indicatorValue, setIndicatorValue] = useState(0);
+
+	const data = useFetchRequest({ url }).data;
+	console.log('responseState: ', data);
+
+	const value = getByInterval({ data, range: 28 });
+	console.log('value: ', getByInterval({ data, range: 7 }));
+	setIndicatorValue(value);
 
 	return {
 		// headingLevel,

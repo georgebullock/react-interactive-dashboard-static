@@ -15,7 +15,7 @@ const Dashboard: React.FunctionComponent = () => {
 				{/* KPI Widget Row */}
 				<Grid row={true}>
 					<Grid row={false} sm={12} md={4}>
-						<IndicatorWidget />
+						<IndicatorWidget url="http://localhost:3000/comments" />
 					</Grid>
 
 					<Grid row={false} sm={12} md={4}>

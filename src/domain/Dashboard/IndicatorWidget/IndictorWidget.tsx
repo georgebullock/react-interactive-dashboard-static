@@ -1,13 +1,15 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import styles from './IndicatorWidget.module.scss';
 import Indicator from './../Indicator/Indicator';
-import { useIndicator } from './useIndicator';
+import { useIndicator, Endpoint } from './useIndicator';
 
 /* ==============================================
  * Types/Interfaces
  * ============================================== */
 
-const IndicatorWidget = (): ReactElement => {
+const IndicatorWidget = (url: Endpoint): ReactElement => {
+	useIndicator(url).indicatorValue;
+
 	return (
 		<section className={styles.widget}>
 			<Indicator
