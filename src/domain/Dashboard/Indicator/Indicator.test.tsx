@@ -9,8 +9,8 @@ describe('Indicator', () => {
 			// common props
 			headingLevel: 'h2',
 			headlineText: 'Sales',
-			indicatorValue: '250',
-			contextBarValue: '25%',
+			indicatorValue: 250,
+			contextBarValue: 0.25,
 			hasContextBar: true,
 
 			// common props override
@@ -38,7 +38,7 @@ describe('Indicator', () => {
 			expect(document.querySelector('h2')).toBeInTheDocument();
 			expect(screen.getByText('Sales')).toBeInTheDocument();
 			expect(screen.getByRole('article')).toHaveTextContent('250');
-			expect(screen.getByText('Δ 25%')).toBeInTheDocument();
+			expect(screen.getByText('0.25')).toBeInTheDocument();
 		});
 	});
 
@@ -49,7 +49,7 @@ describe('Indicator', () => {
 				// common props
 				headingLevel: 'h3',
 				headlineText: 'Conversions',
-				indicatorValue: '1000',
+				indicatorValue: 1000,
 				hasContextBar: false
 			});
 
@@ -68,7 +68,7 @@ describe('Indicator', () => {
 			expect(document.querySelector('h3')).toBeInTheDocument();
 			expect(screen.getByText('Conversions')).toBeInTheDocument();
 			expect(screen.getByRole('article')).toHaveTextContent('1000');
-			expect(screen.queryByText('Δ 25%')).toBeNull();
+			expect(screen.queryByText('0.25')).toBeNull();
 		});
 	});
 });

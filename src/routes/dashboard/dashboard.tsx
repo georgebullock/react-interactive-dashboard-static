@@ -15,7 +15,12 @@ const Dashboard: React.FunctionComponent = () => {
 				{/* KPI Widget Row */}
 				<Grid row={true}>
 					<Grid row={false} sm={12} md={4}>
-						<IndicatorWidget url="http://localhost:3000/comments" />
+						<IndicatorWidget
+							url="http://localhost:3000/comments"
+							headingLevel="h2"
+							headlineText="Comments"
+							hasContextBar={true}
+						/>
 					</Grid>
 
 					<Grid row={false} sm={12} md={4}>

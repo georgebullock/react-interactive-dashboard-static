@@ -5,15 +5,15 @@ import styles from './Indicator.module.scss';
 /* ==============================================
  * Types/Interfaces
  * ============================================== */
-export interface IndicatorProps extends HeadlineProps {
-	indicatorValue: string;
-	contextBarValue?: string;
+export type IndicatorProps = HeadlineProps & {
+	indicatorValue: number;
 	hasContextBar?: boolean;
-}
+	contextBarValue?: number;
+};
 
-export interface ContextBarProps {
-	contextBarValue?: string;
-}
+export type ContextBarProps = {
+	contextBarValue?: number;
+};
 
 const Indicator: React.FunctionComponent<IndicatorProps> = ({
 	headingLevel,
@@ -37,7 +37,7 @@ export const IndicatorContextBar: React.FunctionComponent<ContextBarProps> = ({
 	contextBarValue
 }: ContextBarProps) => {
 	return (
-		<div className={styles['indicator__context-bar']}>Δ {contextBarValue}</div>
+		<div className={styles['indicator__context-bar']}>{contextBarValue}</div>
 	);
 };
 
