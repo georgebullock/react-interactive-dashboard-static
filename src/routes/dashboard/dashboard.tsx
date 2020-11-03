@@ -17,6 +17,7 @@ const Dashboard: React.FunctionComponent = () => {
 					<Grid row={false} sm={12} md={4}>
 						<IndicatorWidget
 							url="http://localhost:3000/comments"
+							dayRange={7}
 							headingLevel="h2"
 							headlineText="Comments"
 							hasContextBar={true}

@@ -23,7 +23,7 @@ describe('Indicator widget business logic', () => {
 				createdDate: '2020-10-30T20:10:33.587Z'
 			}
 		],
-		range: 7
+		dayRange: 7
 	};
 
 	describe('Get comments by interval', () => {
