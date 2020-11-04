@@ -1,5 +1,7 @@
 import React from 'react';
-import Headline, { HeadlineProps } from './../../../shared/Headline/Headline';
+import Headline, {
+	HeadlineProps
+} from './../../../shared/components/Headline/Headline';
 import styles from './Indicator.module.scss';
 
 /* ==============================================

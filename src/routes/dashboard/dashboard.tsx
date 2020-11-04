@@ -1,5 +1,5 @@
 import React from 'react';
-import Grid from '../../shared/Grid/Grid';
+import Grid from '../../shared/components/Grid/Grid';
 import Navigation from '../../core/Navigation/Navigation';
 import IndicatorWidget from './../../domain/Dashboard/IndicatorWidget/IndictorWidget';
 import { routes } from '../../routes/index.routes';

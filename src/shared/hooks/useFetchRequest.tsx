@@ -1,5 +1,4 @@
 import { useReducer, useEffect } from 'react';
-import { Endpoint } from './../../domain/Dashboard/IndicatorWidget/useIndicator';
 
 /* ==============================================
  * Types/Interfaces
@@ -10,13 +9,15 @@ export type UseFetchState = {
 	error?: string | null;
 };
 
+export type Endpoint = string;
+
 type Action =
 	| { type: 'FETCH_INIT' }
 	| { type: 'FETCH_FETCHING' }
 	| { type: 'FETCH_SUCCESS'; payload: [] }
 	| { type: 'FETCH_ERROR'; payload: string };
 
-export const useFetchRequest = ({ url }: Endpoint): UseFetchState => {
+export const useFetchRequest = (url: Endpoint): UseFetchState => {
 	// 1. Define initial state
 	const initialState: UseFetchState = {
 		status: 'FETCH_INIT',

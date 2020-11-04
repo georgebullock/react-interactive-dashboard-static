@@ -2,12 +2,12 @@ import React, { ReactElement, useState } from 'react';
 import styles from './IndicatorWidget.module.scss';
 import Indicator from './../Indicator/Indicator';
 import { useIndicator } from './useIndicator';
-import { HeadlineProps } from '../../../shared/Headline/Headline';
+import { HeadlineProps } from '../../../shared/components/Headline/Headline';
 
 /* ==============================================
  * Types/Interfaces
  * ============================================== */
-type DayRange = 7 | 14 | 21 | 28;
+type DayRange = 1 | 7 | 14 | 21 | 28;
 
 export type IndicatorWidgetProps = HeadlineProps & {
 	url: string;
