@@ -1,7 +1,7 @@
-import { getByInterval, GetByIntervalProps } from './getByInterval';
+import { getValueByRange, GetByRangeProps } from './getValueByRange';
 
 describe('Indicator widget business logic', () => {
-	const props: GetByIntervalProps = {
+	const props: GetByRangeProps = {
 		data: [
 			{
 				id: 0,
@@ -30,7 +30,7 @@ describe('Indicator widget business logic', () => {
 		test('It should should filter comments by interval', () => {
 			// Arrange - Setup your test
 			// Act - Take some action
-			const count = getByInterval(props);
+			const count = getValueByRange(props);
 			// Assert - Determine if something is as expected
 			expect(count).toBe(2);
 		});
