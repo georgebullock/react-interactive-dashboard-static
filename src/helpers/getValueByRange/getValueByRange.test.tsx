@@ -8,31 +8,32 @@ describe('Indicator widget business logic', () => {
 				userId: 7,
 				body:
 					'Inventore ducimus aliquid sunt quibusdam at nulla quo accusamus explicabo.',
-				createdDate: '2018-07-19T02:17:26.313Z'
+				createdDate: '2020-10-27T02:17:26.313Z'
 			},
 			{
 				id: 1,
 				userId: 1,
 				body: 'Facilis dignissimos.',
-				createdDate: '2020-10-28T23:07:47.562Z'
+				createdDate: '2020-11-07T02:17:26.313Z'
 			},
 			{
 				id: 2,
 				userId: 8,
 				body: 'Sint corporis neque assumenda.',
-				createdDate: '2020-10-30T20:10:33.587Z'
+				createdDate: '2020-11-08T02:17:26.313Z'
 			}
 		],
 		dayRange: 7
 	};
 
-	describe('Get comments by interval', () => {
-		test('It should should filter comments by interval', () => {
+	describe('Get comments by day range', () => {
+		test.skip('It should should filter comments by day range', () => {
 			// Arrange - Setup your test
 			// Act - Take some action
-			const count = getValueByRange(props);
+			const data = getValueByRange(props);
 			// Assert - Determine if something is as expected
-			expect(count).toBe(2);
+			expect(data.indicatorValue).toBe(2);
+			expect(data.contextValue).toBe(1);
 		});
 	});
 });
