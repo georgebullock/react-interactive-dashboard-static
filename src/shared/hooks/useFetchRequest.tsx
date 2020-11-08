@@ -18,14 +18,12 @@ type Action =
 	| { type: 'FETCH_ERROR'; payload: string };
 
 export const useFetchRequest = (url: Endpoint): UseFetchState => {
-	// 1. Define initial state
 	const initialState: UseFetchState = {
 		status: 'FETCH_INIT',
 		data: [],
 		error: null
 	};
 
-	// 2. Define actions 3. Write reducer
 	const reducer = (state: UseFetchState, action: Action): UseFetchState => {
 		switch (action.type) {
 			case 'FETCH_INIT':

@@ -10,7 +10,7 @@ describe('useFetchRequest', () => {
 	};
 
 	describe('Fetch user comments', () => {
-		test('It should fetch user comments', () => {
+		test.skip('It should fetch user comments', () => {
 			expect('Hello World').toBeTruthy();
 		});
 	});
