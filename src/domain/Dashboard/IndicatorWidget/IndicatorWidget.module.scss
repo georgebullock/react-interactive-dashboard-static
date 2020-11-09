@@ -1,0 +1,9 @@
+@import './../../../index.scss';
+
+.widget {
+	display: flex;
+	flex-direction: column;
+	padding: $padding-base;
+	border: 1px solid $color-mineshaft;
+	border-radius: 10px;
+}

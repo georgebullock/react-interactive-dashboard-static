@@ -3,7 +3,7 @@ import { NavLink, RouteProps } from 'react-router-dom';
 import { IconContext, IconType } from 'react-icons';
 import styles from './Navigation.module.scss';
 
-/** ==============================================
+/* ==============================================
  * Types/Interfaces
  * ============================================== */
 interface RouteObject extends RouteProps {
@@ -24,7 +24,7 @@ interface NavItemProps {
 	};
 }
 
-/** ==============================================
+/* ==============================================
  * Third-Party Component Props
  * ============================================== */
 // react-icons Provider object
